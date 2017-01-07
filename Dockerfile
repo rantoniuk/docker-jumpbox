@@ -21,6 +21,4 @@ RUN apt-get -q update >/dev/null \
 COPY auth-script.sh /auth-script.sh
 COPY start_ssh_server.sh /usr/bin/start_ssh_server.sh
 
-#RUN chmod 755 /auth-script.sh && chown root.root /auth-script.sh
-
 ENTRYPOINT ["/usr/bin/start_ssh_server.sh"]
