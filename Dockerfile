@@ -7,7 +7,7 @@ RUN apt-get -q update >/dev/null \
   && mkdir /var/run/sshd \
 
   # Auto-create user's homedir
-  && echo "\n# Auto-create user's homedir" >> /etc/pam.d/common-account \
+  && echo -e "\n# Auto-create user's homedir" >> /etc/pam.d/common-account \
   && echo "session    required   pam_mkhomedir.so skel=/etc/skel/ umask=${HOMEDIR_UMASK:-0077}" >> /etc/pam.d/common-account \
   # SSH keys from file auth script
   && echo "AuthorizedKeysCommand /auth-script.sh" >> /etc/ssh/sshd_config \
