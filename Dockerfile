@@ -18,7 +18,6 @@ RUN apt-get -q update >/dev/null \
   && apt-get autoremove --yes \
   && rm -rf /var/lib/{apt,dpkg,cache,log}/ 
 
-COPY authorized-keys /authorized-keys
 COPY auth-script.sh /auth-script.sh
 COPY start_ssh_server.sh /usr/bin/start_ssh_server.sh
 
