@@ -13,7 +13,7 @@ docker run --name ssh_server -d -e USERS="user1,user2" -v ${PWD}/authorized-keys
 
 where:
 * USERS - semi-colon separated list of users allowed to log in
-* ${PWD}/authorized-keys - path to file containing user's SSH public keys in the following format
+* ${PWD}/authorized-keys - path to file containing user's SSH public keys in the following format:
 
 ```
 user1:ssh-rsa AAA................
