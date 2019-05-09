@@ -1,4 +1,4 @@
-FROM oberthur/docker-ubuntu:16.04
+FROM ubuntu:18.04
 
 ENV TERM=xterm-256color
 
